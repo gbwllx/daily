@@ -1,9 +1,15 @@
-package book.silicon.part6;
+package book.silicon.part6array;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ *	0. 时间复杂度当然越低越好
+ *
+	1. 是否允许对原数组的修改
+ 	2. 对空间复杂度是否有要求
+ */
 public class Sum2 {
 	/*
 	 * 对每个数遍历一次，直到找到，时间复杂度O(N2)，空间复杂度O(1)
