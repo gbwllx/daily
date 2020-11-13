@@ -1,0 +1,12 @@
+monkey报错信息：[signal SIGBUS: bus error code=0x2 addr=0x4e48c80 pc=0x67ff06a]
+gomonkey报错：permission denied
+
+
+具体原因参考：https://github.com/agiledragon/gomonkey/issues/10
+   macos10.15之后syscall.Mprotect执行权限问题
+   
+   
+TODO1: 暂时没有好的解决方式，文章中有两个临时解决方式并不能彻底解决问题
+TODO2: 并不是稳定复现，内存修改权限相关还得学习
+   
+   
