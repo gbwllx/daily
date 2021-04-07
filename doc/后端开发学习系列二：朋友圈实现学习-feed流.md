@@ -21,12 +21,18 @@
 
 四、存储选型，按以下TODO分析：
 1. TiDB适合业务量是多少，为什么？（实现）
+    TB级
 2. TiDB与mysql的区别？
 3. 腾讯paxosStore实现
 4. mysql方案适合业务量是多少，为什么？（实现）
 5. mysql分库分表也不行吗？为什么？
   部分回答：https://pingcap.com/blog-cn/how-do-we-build-tidb/
 6. mysql分库分表的实现方案
+
+
+
+feed流实现方案已经比较全了，不自己写了：
+    https://www.alibabacloud.com/blog/feed-stream-system-design-general-principles_595900
 
 
 问题按重要程度排序，提问题并不一定回答，因为随时会插入更重要的问题，永远做最重要的那件事
