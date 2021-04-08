@@ -4,7 +4,7 @@
 
 二、tidb实现主流程图
 
-![tidb主流程](https://github.com/gbwllx/daily/blob/master/docs/tidb-server%E4%B8%BB%E6%B5%81%E7%A8%8B.png)
+![tidb主流程](https://github.com/gbwllx/daily/blob/master/docs/images/tidb-server%E4%B8%BB%E6%B5%81%E7%A8%8B.png)
 
 
 TODO：
