@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab3fbfdd-487d-4c21-a931-f4381b90bfac" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.15.7/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qpuSC2bFRssjVkf1yWAnDkW5ch" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../fintech_cf" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="目录整理" />
+    <option name="LAST_COMMIT_MESSAGE" value="目录整理" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="437" y="122" key="CommitChangelistDialog2" timestamp="1617788920242">
+      <screen x="0" y="25" width="1792" height="1015" />
+    </state>
+    <state x="437" y="122" key="CommitChangelistDialog2/0.25.1792.1015@0.25.1792.1015" timestamp="1617788920242" />
+    <state x="496" y="268" key="Vcs.Push.Dialog.v2" timestamp="1617788928562">
+      <screen x="0" y="25" width="1792" height="1015" />
+    </state>
+    <state x="496" y="268" key="Vcs.Push.Dialog.v2/0.25.1792.1015@0.25.1792.1015" timestamp="1617788928562" />
+  </component>
+</project>
