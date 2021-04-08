@@ -7,6 +7,8 @@
   学习数据埋点
   学习如何使用golang的
 
+太啰嗦，这次反过来写，先写一些细节，再汇总
+
  参考：
  1. https://github.com/tidb-incubator/tidb-in-action
  2. https://docs.pingcap.com/zh/tidb/stable/quick-start-with-tidb
