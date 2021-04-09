@@ -1,4 +1,5 @@
 #### 一、Config
+、、、
 type Config struct {
 	Host             string `toml:"host" json:"host"`     //host
 	AdvertiseAddress string `toml:"advertise-address" json:"advertise-address"`   //ip
@@ -100,8 +101,9 @@ type Config struct {
 	// 2. there is a network partition problem between TiDB and TiKV leader.
 	EnableForwarding bool `toml:"enable-forwarding" json:"enable-forwarding"`
 }	
-
+、、、
 #### 二、默认配置
+、、、
 var defaultConf = Config{
 	Host:                         DefHost,
 	AdvertiseAddress:             "",
@@ -234,6 +236,7 @@ var defaultConf = Config{
 	StoresRefreshInterval:        defTiKVCfg.StoresRefreshInterval,
 	EnableForwarding:             defTiKVCfg.EnableForwarding,
 }  
+、、、  
   
 #### 三、  flag
   version      = flagBoolean(nmVersion, false, "print version information and exit")
