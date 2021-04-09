@@ -1,5 +1,5 @@
 #### 一、Config
-、、、
+```
 type Config struct {
 	Host             string `toml:"host" json:"host"`     //host
 	AdvertiseAddress string `toml:"advertise-address" json:"advertise-address"`   //ip
@@ -101,9 +101,9 @@ type Config struct {
 	// 2. there is a network partition problem between TiDB and TiKV leader.
 	EnableForwarding bool `toml:"enable-forwarding" json:"enable-forwarding"`
 }	
-、、、
+```
 #### 二、默认配置
-、、、
+```
 var defaultConf = Config{
 	Host:                         DefHost,
 	AdvertiseAddress:             "",
@@ -236,9 +236,10 @@ var defaultConf = Config{
 	StoresRefreshInterval:        defTiKVCfg.StoresRefreshInterval,
 	EnableForwarding:             defTiKVCfg.EnableForwarding,
 }  
-、、、  
+``` 
   
 #### 三、  flag
+```
   version      = flagBoolean(nmVersion, false, "print version information and exit")
 	configPath   = flag.String(nmConfig, "", "config file path")
 	configCheck  = flagBoolean(nmConfigCheck, false, "check config file validity and exit")
@@ -278,5 +279,5 @@ var defaultConf = Config{
 	// PROXY Protocol
 	proxyProtocolNetworks      = flag.String(nmProxyProtocolNetworks, "", "proxy protocol networks allowed IP or *, empty mean disable proxy protocol support")
 	proxyProtocolHeaderTimeout = flag.Uint(nmProxyProtocolHeaderTimeout, 5, "proxy protocol header read timeout, unit is second.")
-
+```
 
