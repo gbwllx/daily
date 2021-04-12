@@ -11,26 +11,44 @@
 ```
 // Server is the MySQL protocol server
 type Server struct {
-	cfg               *config.Config   //https://github.com/gbwllx/daily/blob/master/docs/tidb%20Config%E5%AD%A6%E4%B9%A0.md
-	tlsConfig         unsafe.Pointer   // *tls.Config
-	driver            IDriver          //TiDBDriver封装了一个storage，测试一般用unistore
-	listener          net.Listener     //tidb server listener
+	cfg               *config.Config //https://github.com/gbwllx/daily/blob/master/docs/tidb%20Config%E5%AD%A6%E4%B9%A0.md
+	tlsConfig         unsafe.Pointer // *tls.Config
+	driver            IDriver        //TiDBDriver封装了一个storage，测试一般用unistore
+	listener          net.Listener   //tidb server listener
 	socket            net.Listener
 	rwlock            sync.RWMutex
-	concurrentLimiter *TokenLimiter    //session数量限流，依赖cfg.TokenLimit；写本地限流方法可以参考一下
-	clients           map[uint64]*clientConn
-	capability        uint32
-	dom               *domain.Domain
-	globalConnID      util.GlobalConnID
+	concurrentLimiter *TokenLimiter          //session数量限流，依赖cfg.TokenLimit；写本地限流方法可以参考一下
+	clients           map[uint64]*clientConn //每次请求都创建新的clientConn
+	capability        uint32                 //初始化为defaultCapability
+	dom               *domain.Domain         //TODO storage space??
+	globalConnID      util.GlobalConnID      //connID
 
-	statusAddr     string
+	statusAddr     string //statusAddr is the HTTP address for reporting the internal status of a TiDB server
 	statusListener net.Listener
 	statusServer   *http.Server
-	grpcServer     *grpc.Server
-	inShutdownMode bool
+	grpcServer     *grpc.Server //used for SQL diagnose and Coprocessor service
+	inShutdownMode bool         //shutdown
 }
 ```
+```
+// TiDBContext implements QueryCtx.
+type TiDBContext struct {
+	session.Session
+	currentDB string
+	stmts     map[int]*TiDBStatement
+}
 
+// TiDBStatement implements PreparedStatement.
+type TiDBStatement struct {
+	id          uint32
+	numParams   int
+	boundParams [][]byte
+	paramsType  []byte
+	ctx         *TiDBContext
+	rs          ResultSet
+	sql         string
+}
+```
 
 
 TODO：
