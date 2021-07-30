@@ -1,0 +1,51 @@
+1. consistent read： https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_consistent_read
+    1.a. concurrency: https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_concurrency
+        2.a ACID: https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_acid
+            3.a atomic: https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_atomic
+            3.b commit: https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_commit
+                4.a autocommit: https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_autocommit
+                    5.a commit---->3.b
+                    5.b locking---->1.c
+                    5.c read-only transaction: https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_read_only_transaction
+                        6.a non-locking read: https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_non_locking_read
+                            A query that does not use the SELECT ... FOR UPDATE or SELECT ... LOCK IN SHARE MODE clauses. The only kind of query allowed for global tables in a read-only transaction. The opposite of a locking read.
+                            7.a locking read: https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_locking_read
+                            7.b query
+                            7.c read-only transaction---->5.c
+                        6.b read view
+                        6.c transactiion---->1.g
+                    5.d SQL
+                    5.e transaction
+                    5.f undo
+                4.b optimistic: 
+                4.c rollback---->3.g
+                4.d SQL:
+                4.e transaction---->1.g
+            3.c concurrency---->1.a
+            3.d doublewrite buffer:
+            3.e isolation level---->1.b
+            3.f locking---->1.c
+            3.g rollback:
+            3.h transaction---->1.g
+        2.b locking---->1.c
+        2.c transaction---->1.g
+    1.b. isolation level:
+    1.c. locking:
+    1.d. READ COMMITTED:
+    1.e. REPEATABLE READ:
+    1.f. snapshot：
+    1.g. transaction：
+    1.h. undo log：
+
+
+
+15.7.2.3 Consistent Nonlocking Reads: https://dev.mysql.com/doc/refman/8.0/en/innodb-consistent-read.html
+13.3.1 START TRANSACTION, COMMIT, and ROLLBACK Statements: https://dev.mysql.com/doc/refman/8.0/en/commit.html
+8.5.3 Optimizing InnoDB Read-Only Transactions: https://dev.mysql.com/doc/refman/8.0/en/innodb-performance-ro-txn.html
+
+
+
+
+
+
+
