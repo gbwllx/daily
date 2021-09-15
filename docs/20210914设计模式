@@ -16,3 +16,6 @@
     中介者和结构型的facade作用上类似，应用对象和概念上有区别
 3.5不常用的行为型设计模式：command
   命令模式：最没用的模式了吧？工作这么长时间没看到哪里用到，也没看到谁讲出新鲜的东西。掌握设计模式基本原则SOLID就可以代替这个模式了
+
+
+参考：https://github.com/muthukumarse/books-1/blob/master/Design%20Patterns%2C%20Elements%20of%20Reusable%20Object-Oriented%20Software.pdf
