@@ -1,0 +1,39 @@
+参考文章：https://graspingtech.com/ubuntu-desktop-18.04-virtual-machine-macos-qemu/
+
+Step 1: 
+1. brew install qemu
+2. qemu-system-x86_64 --version
+
+QEMU emulator version 5.2.0
+Copyright (c) 2003-2020 Fabrice Bellard and the QEMU Project developers
+
+Step 2: 
+    1. 下载ubuntu： 
+    https://ubuntu.com/download/desktop
+    2. mkdir QEMU
+    3. mv $file ～/QEMU/$file
+        
+
+Step 3:
+   1.  qemu-img create -f qcow2 ~/QEMU/ubuntu-21.04-desktop.qcow2 10G
+    
+Step4: 
+    1. touch ~/QEMU/start.sh
+
+    2. vim start.sh
+    -cpu Nehalem
+    -cdrom ubuntu-21.04-desktop-amd64.iso \
+    -drive file=ubuntu-21.04-desktop.qcow2,if=virtio \
+
+    3. cd ~/QEMU
+    sudo chmod +x start.sh
+
+    4. 报错HV_ERROR，先删掉了,accel=hvf（但是特别慢，不加速特别慢，每次都反应几十秒。整个安装过程用了3个小时，加速之后特别快）
+      其中-machine type=q35,accel=hvf是macos上支持的加速
+
+Step5:解决macOS报错HV_ERROR
+  codesign -s - --entitlements entitlements.xml --force  $(which qemu-system-x86_64)
+  参考：  https://www.arthurkoziel.com/qemu-on-macos-big-sur/
+
+
+
